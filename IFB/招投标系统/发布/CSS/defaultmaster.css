@@ -1,0 +1,58 @@
+
+BODY {
+	BORDER-BOTTOM: 0px;  BORDER-LEFT: 0px; MARGIN: 0px; BACKGROUND: url(../images/master/page_bg.jpg) repeat-y center center; FONT-SIZE: 13px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+*{margin:0px; padding:0px;}
+.clear{ clear:both;}
+IMG {
+	border-width: 0px;
+    padding: 0px;
+    MARGIN: 0px;
+}
+a{ color:#1044BA; text-decoration:none;}
+a:hover{text-decoration: underline; color:Red; }
+.input_11{background:url(../images/bg_4.gif) no-repeat; width:100px; height:23px;line-height:23px;  border:0px;}
+.input_22{background:url(../images/bg_5.gif) no-repeat; width:100px; height:23px; line-height:23px; border:0px;}
+.input_33{background:url(../images/bg_6.gif) no-repeat; width:50px; height:23px; line-height:23px; border:0px;}
+.input_1{ width:121px; height:16px;}
+.input_2{ width:121px; height:16px; }
+.input_3{ width:64px; height:16px; }
+.input_4{ width:200px; height:18px;}
+.xiangqing{ line-height:24px;}
+.laiyuan{ text-align:right;color:#01548e;padding:20px 0;}
+.button{  border:0px;}
+.buttonhover{ border: solid 1px #1044BA}
+.banquan
+{
+    background-image: url(/images/head/dxian.jpg);
+    text-align: center;
+    margin-top: 5px;
+    width:100%;
+    height: 15px;
+}
+.banquan_content
+{
+    background-color: #f5f5f5;
+    width: 300px;
+    height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lianxi
+{
+    text-align: center;
+    line-height: 30px;
+    width:100%;
+    height: 30px;
+}
+.shoucang
+{  
+    text-align: center;
+    line-height: 30px;
+    width:100%;
+    height: 30px;
+    background-image:url("../images/img_bottomnav.PNG");
+    }
+   .shoucang a{ color:Black; cursor:pointer; text-decoration:none;} 
+   
+   

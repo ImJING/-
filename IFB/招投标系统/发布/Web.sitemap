@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/index.aspx" title="首页"  description="">
+    <siteMapNode url="~/ProjectList.aspx" title="招标公告"  description="">
+      <siteMapNode url="~/ProjectDetail.aspx" title="公告详情"  description=""></siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/PublicityList.aspx" title="中标公告"  description="">
+      <siteMapNode url="~/Publicity.aspx" title="公告详情"  description=""></siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="~/DisplyProcess.aspx" title="操作流程"  description="" />
+    <siteMapNode url="~/EpseRegister.aspx" title="企业注册"  description="" />
+    <siteMapNode url="~/RgSuccess.aspx" title="注册成功"  description="" />
+  </siteMapNode>
+</siteMap>

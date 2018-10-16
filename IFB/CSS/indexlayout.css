@@ -1,0 +1,60 @@
+﻿body 
+{
+    font-size:14px; 
+    color:Black;
+} 
+#box
+{
+    width:100%; 
+    min-height:470px;
+}
+#regist
+{
+    width:345px; 
+    float:right; 
+}
+#content
+{
+   float:left;
+   width:552px; 
+}
+#r_top
+{
+   width:100%;
+   height:235px;
+   background-image:url('../images/master/img_register.gif');
+   background-repeat:no-repeat; 
+}
+#r_bottom
+{
+    width:100%; 
+    min-height:235px;
+    background-image:url('../images/master/img_connection.gif');
+    background-repeat:no-repeat;
+}
+#content
+{
+   width:550px;  
+   float:left;  
+}
+#r_top_table
+{
+    width:100%;
+    height:235px;
+}
+#r_bottom_ul
+{
+   list-style:none;  
+}
+#r_bottom_R1
+{  
+    display:none; 
+}
+#r_bottom_R2
+{
+    display:none;
+}
+r_bottom_R3
+{
+    display:none;
+}

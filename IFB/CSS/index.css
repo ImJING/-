@@ -1,0 +1,55 @@
+﻿  
+.zaixian
+    {
+        width: 362px;
+        margin-right: 8px;
+        float: left;
+    }
+.GridviewHead
+{
+    
+    height:32px;
+    background-color:#F5F5F5;
+    }
+.GridviewRow
+{ 
+    height:25px;
+}
+.link{color:#1044BA; text-decoration:none; cursor:pointer} 
+.link:hover{text-decoration: underline; color:Red;} 
+.link:visited{ color:Red; text-decoration: none;} 
+.link:active {COLOR: Red; TEXT-DECORATION: underline;}
+.curr{cursor:default}
+
+.title img{ 
+
+}
+.title1
+{
+    width: 1000px;
+    height: 30px;
+    float: left;
+    border-bottom: none;
+    font-weight: bold;
+    margin-top:5px;
+    background-color:#EAEDF6;
+    }
+    .title
+{
+    width:100%;
+    height: 30px;
+    float: left;
+    border-bottom: none;
+    font-weight: bold;
+    margin-top:5px;
+    vertical-align:middle;
+    background-image:url("../images/img_index.PNG")
+    }
+.clear{ clear:both;}
+.border
+{
+    border-left-style:none;
+    border-left-color:White;
+    border-right-style:none;
+    border-right-color:White;
+}

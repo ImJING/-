@@ -1,0 +1,512 @@
+﻿body {
+	font: 12px "宋体";
+    text-align: center;
+	font-family:Verdana;
+}
+
+.textarea{
+color: #082433;
+}
+.input
+{
+	color: #ff0000;
+}
+
+a{
+	color: #082433;
+	text-decoration:none;
+	font-size:12px;
+}
+a:visited
+{
+    color: #00F;
+    text-decoration: none;
+}
+a:active {
+	color: #008080;
+	text-decoration:none;
+}
+a:hover {
+	color: #316088;
+	text-decoration:underline;
+	}
+
+a.japan {
+	color: #27453D;
+	text-decoration:none;
+	font-size:12px;
+}
+a.japan:visited {
+	color: #27453D;
+	text-decoration:none;
+}
+a.japan:active {
+	color: #008080;
+	text-decoration:none;
+}
+a.japan:hover {
+	color: #316088;
+	text-decoration:underline;
+	}
+
+a.white {
+	color: #ffffff;
+	text-decoration:none;
+	font-size:12px;
+}
+a.white:visited {
+	color: #ffffff;
+	text-decoration:none;
+}
+a.white:active {
+	color: #ffffcc;
+	text-decoration:none;
+}
+a.white:hover {
+	color: #E6FFFF;
+	text-decoration:underline;
+	}
+
+.style1 {
+	background-image: url('../images/loginin_top_bg.jpg');
+}
+.style2 {
+	font-size: 14px;
+	color: #45637E;
+	font-weight:bold;
+}
+.style3 {
+	background-image: url('../images/loginin_line.gif');
+}
+.style4 {
+	text-align: center;
+}
+.style5 {
+	font-size: 12px;
+	color: #808080;
+	font-family: Verdana;
+}
+.style6 {
+	border: 1px solid #83ABCD;
+	background-color: #D5E8F4;
+}
+.style7 {
+	text-align: left;
+}
+.style8 {
+	font-size:12px;
+	color: #45637E;
+	font-weight: bold;
+}
+.style9 {
+	background-image: url('../images/loginin_line1.gif');
+}
+.style10 {
+	font-size: 12px;
+	color: #45637E;
+	padding-left:10px;
+}
+.style11
+{
+	border-bottom:#316088 1px solid;
+	border-left:#316088 1px solid;
+	border-right:#316088 1px solid;
+	border-top:#316088 1px solid;
+	height:20px;
+}
+
+.style12 {
+	border: 1px solid #83ABCD;
+	background-color: #EDF7FD;
+}
+.style13 {
+	border: 1px solid #83ABCD;
+	background-color: #F3F1F2;
+}
+
+.style15 {
+	text-align: right;
+}
+.style16 {
+	font-size:12px;
+	color: #FFFFFF;
+}
+.style17 {
+	font-size:12px;
+	color: #808080;
+	font-family: Verdana;
+}
+.style18 {
+	border-color: #83ABCD;
+	border-width: 0;
+	background-color: #F3F1F2;
+	color: #000000;
+}
+.style19 {
+	border-color: #83ABCD;
+	border-width: 0;
+	background-color: #F3F1F2;
+	color: #000000;
+	font-size:12px;
+	text-align: left;
+}
+.style20 {
+	text-align: center;
+	background-image: url('../images/top_bg.jpg');
+	height:29px;
+	border-right:1px #83ABCD solid;
+	
+}
+.style22 {
+	border: 0 solid #83ABCD;
+	background-color: #F3F1F2;
+	color: #000000;
+	text-align: center;
+	background-image: url('../images/top_bg.jpg');
+}
+.style25 {
+	background-image: url('../images/btn_2.jpg');
+}
+.style23 {
+	background-image: url('../images/btn_1.jpg');
+}
+.style26 {
+	border-color: #83ABCD;
+	border-width: 0;
+	font-size: small;
+	color: #FFFFFF;
+}
+.style29 {
+	border-color: #83ABCD;
+	border-width: 0;
+	background-color: #f4f3f4;
+	color: #000000;
+	text-align: center;
+}
+.style31 {
+	text-align: left;
+	color: #000000;
+	background-color: #f4f3f4;
+	padding-left:10px;
+	font-size:12px;
+	border-right:1px #83ABCD solid;
+	height:25px;
+	
+}
+.style32 {
+	text-align: left;
+	color: #000000;
+	background-color: #e5e5e5;
+	padding-left:10px;
+	font-size:12px;
+	border-right:1px #83ABCD solid;
+	height:25px;
+
+}
+.style33 {
+	border-color: #83ABCD;
+	border-width: 0;
+	background-color: #e5e5e5;
+	color: #000000;
+	text-align: center;
+}
+.style34 {
+	font-size: 12px;
+}
+.style35 {
+	font-size: 12px;
+	color: #FF0000;
+}
+.style36{
+	border-bottom:#316088 1px solid;
+	border-left:#316088 1px solid;
+	border-right:#316088 1px solid;
+	border-top:#316088 1px solid;
+	height:14px;
+}
+
+.style37 {
+	font-size: 12px;
+	font-weight:bold;
+	text-align: left;
+}
+.style38 {
+	border: 1px solid #83ABCD;
+	background-color: #EDF7FD;
+}
+
+.style39 {
+	font-size: 14px;
+	color: #45637E;
+	font-weight:bold;
+}
+.style40 {
+	background-image: url('../images/loginin_line.gif');
+}
+.style41 {
+	text-align: center;
+}
+.style42 {
+	font-size: 12px;
+	color: #808080;
+	font-family: "Times New Roman", Times, serif;
+}
+.style43 {
+	border: 1px solid #83ABCD;
+	background-color: #D5E8F4;
+}
+.style44 {
+	text-align: left;
+}
+.style45 {
+	font-size:12px;
+	color: #45637E;
+	font-weight: bold;
+}
+.style46 {
+	background-image: url('../images/loginin_line1.gif');
+}
+.style47 {
+	font-size: 12px;
+	color: #45637E;
+	padding-left:10px;
+}
+.style48
+{
+	border-bottom:#316088 1px solid;
+	border-left:#316088 1px solid;
+	border-right:#316088 1px solid;
+	border-top:#316088 1px solid;
+	height:16px;
+	color:#316088;
+	width:98%;
+}
+.style49 {
+	text-align: center;
+	background-image: url('../images/login_foot_bg.jpg');
+}
+.style50 {
+	font-size: 14px;
+	color: #45637E;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: right;
+	padding-right:10px;
+}
+.style51
+{
+	border-bottom:#74abd1 1px solid;
+	border-left:#74abd1 1px solid;
+	border-right:#74abd1 1px solid;
+	border-top:#74abd1 1px solid;
+	height:16px;
+	background-color:#d2ebfa;
+	color:#255080;
+}
+.style52 {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: Verdana;
+	font-size:12px;
+}
+.style53
+{
+	padding-bottom:5px;
+	font-family:Verdana;
+	color:White;
+	}
+.style54
+{
+	padding-right:10px;
+	}
+.style55 {
+	font-size: 14px;
+	color: #ff0000;
+	font-weight:bold;
+}
+.btn
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-image: url('../images/btn_bg.jpg');
+	    width:58px;
+	    height:22px;
+	    color:White;
+	    font-size:12px;
+	    font-family:Verdana;
+    }
+.btn1
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-image: url('../images/btn1_bg.jpg');
+	    width:76px;
+	    height:22px;
+	    color:White;
+	    font-size:12px;
+	    font-family:Verdana;
+	
+
+	}
+.btn2
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    background-image: url('../images/btn2_bg.jpg');
+	    width:95px;
+	    color:White;
+	    font-size:12px;
+	     height:22px;
+	    font-family:Verdana;
+	
+
+	}
+table.tblist {
+	vertical-align:top;
+	font-size:12px;
+}
+table.tblist td {
+	border: 1px solid #83ABCD;
+	background-color: #D5E8F4;
+	line-height:25px;
+	
+}
+.gridview
+{
+	vertical-align:top;
+	font-size:12px;
+	border: 1px solid #83ABCD;
+	background-color: #D5E8F4;
+	line-height:25px;
+	padding-left:10px;
+	
+	}
+.gridviewtitle
+{
+	vertical-align:top;
+	font-size:12px;
+	background-image:url('../images/top_bg.jpg');
+	line-height:30px;
+	
+	}
+.gridview1
+{
+	vertical-align:top;
+	font-size:12px;
+	border: 1px solid #83ABCD;
+	background-color: #D5E8F4;
+	line-height:25px;
+	padding-left:10px;
+	width:100%;
+}
+.gridviewjl
+{	
+	padding-left:10px;
+	
+	}	
+	.LoginStyle
+	{
+	    margin: 0; background-image: url('../images/login_bg.jpg'); background-attachment: fixed
+	}
+.FootPageStyle
+{
+    text-align: center;
+	font-size: 12px;
+	color: #FFFFFF;
+	font-family: Verdana;
+	background-image: url('../images/loginin_foot_bg.jpg');
+}
+
+.hidden
+{
+    display:none;
+}
+
+a:link
+{
+    color: #00F;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #c00;
+    text-decoration: underline;
+}
+ul
+{
+    list-style: none;
+}
+.main
+{
+    clear: both;
+    min-width: 960px;
+    text-align: center;
+}
+/*第一种形式*/
+#zzjs_net_1
+{
+    min-width: 960px;
+    min-height: 400px;
+    border: 1px solid #cbcbcb;
+    background-color: #f2f6fb;
+}
+.menu0
+{
+    width: 960px;
+    height: 20px;
+}
+.menu0 li
+{
+    display: block;
+    float: left;
+    padding: 4px 0;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    background: #FFFFff;
+}
+.menu0 li.hover
+{
+    background: #f2f6fb;
+}
+#main0 ul
+{
+    display: none;
+}
+#main0 ul.block
+{
+    display: block;
+}
+
+.anpager 
+{
+    font-size:12px;
+}
+.anpager .cpb 
+{
+    background:#1F3A87 none repeat scroll 0 0;
+    border:1px solid #CCCCCC;
+    color:#FFFFFF;
+    font-weight:bold;
+    margin:5px 4px 0 0;
+    padding:4px 5px 0;
+}
+.anpager a 
+{
+    background:#FFFFFF none repeat scroll 0 0;
+    border:1px solid #CCCCCC;
+    color:#1F3A87;
+    margin:5px 4px 0 0;
+    padding:4px 5px 0;
+    text-decoration:none
+}
+.anpager a:hover
+{
+    background:#1F3A87 none repeat scroll 0 0;
+    border:1px solid #1F3A87;
+    color:#FFFFFF;
+}

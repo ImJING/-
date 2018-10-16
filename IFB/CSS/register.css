@@ -1,0 +1,39 @@
+﻿.txtpwd_BarIndicator
+{
+    background-color: Blue;
+}
+.txtpwd_BarBorder
+{
+    width: 100px;
+    height: 15px;
+    border: 1px solid red;
+}
+#logo1
+{
+    background-image: url('images/regiterlogo.jpg');
+    width: 615px;
+    height: 25px;
+    background-repeat: no-repeat;
+}
+#logo2
+{
+    background-image: url('images/img_part.jpg');
+    width: 385px;
+    height: 15px;
+}
+
+.promptinfo
+{
+  font-size: 11px; 
+  color: Red;  
+  text-align:left;
+}
+
+.spanStyle
+{
+   color:Red;
+   text-align:right;
+   width:200px;
+}
+
+ 

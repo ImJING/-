@@ -1,0 +1,383 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.Master.cs" Inherits="JSMSTC.InviteTender.Site1" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>淮安市清河区小型工程招标网 </title>
+
+    <script src="JS/jquery.js" type="text/javascript"></script>
+
+    <script src="JS/topjs.js" type="text/javascript"></script>
+
+    <script type="text/javascript" language="javascript">
+        var value; //记录读取的session值
+        var userresult; //记录读取的验证结果
+        function GetSessionValue() {
+            $.ajax({
+                type: "get",
+                url: "GetSessiovalue.aspx",
+                dataType: "text",
+                data: { Action: "GetSession" },
+                async: false,
+                cache: false,
+                success: function(sessionValue) {
+                    value = sessionValue;
+                }
+            });
+        }
+        function SerialCheck(source, arguments) {
+            GetSessionValue();
+            var code = $("#ctl00_TextBoxCheck").attr("value");
+            if (value != null && code != null) {
+                if (code.toString().toLowerCase() == value.toString().toLowerCase()) {
+                    arguments.IsValid = true;
+                }
+                else {
+                    $("#ctl00_TextBoxCheck").attr("value", "");
+                    arguments.IsValid = false;
+                    $("#imgSerial").attr("src", "Management/Common/VerifyImage.ashx?" + Math.random());
+                    $("#ctl00_TextBoxCheck").focus();
+
+                }
+            }
+            else
+            { arguments.IsValid = false; }
+        }
+
+        function GetUserCkeck(uid, pwd) {
+            $.ajax({
+                type: "get",
+                url: "GetSessiovalue.aspx",
+                dataType: "text",
+                data: { Action: "GetUser", Uid: uid, Pwd: pwd },
+                async: false,
+                cache: false,
+                success: function(sessionValue) {
+                    userresult = sessionValue;
+                }
+            });
+        }
+        function CheckLogIn(source, arguments) {
+
+            var uid = $("#ctl00_TextBoxLoginName").attr("value");
+            var pwd = $("#ctl00_TextBoxLogPwd").attr("value");
+            GetUserCkeck(uid, pwd);
+            alert(userresult);
+            if (userresult != "1") {
+                arguments.IsValid = false;
+            }
+            else {
+                arguments.IsValid = true;
+            }
+        }
+        function checkcss(e) {
+
+            e.style.border = "1px solid #6E7A56";
+        }
+        function clearcss(e) {
+            e.style.borderWidth = 0;
+        }
+    </script>
+
+    <link href="CSS/defaultmaster.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #hd
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 982px;
+            font-family: Arial, Helvetica, sans-serif,simsun;
+            top: 0px;
+            background-color: #0000C6;
+            left: 14px;
+            height: 55px;
+        }
+        #hd:after
+        {
+            display: block;
+            height: 0px;
+            visibility: hidden;
+            clear: both;
+            overflow: hidden;
+            content: ".";
+        }
+        #lg
+        {
+            width: 165px;
+            float: left;
+            margin-left: -25px;
+            padding: 0px;
+        }
+        #main
+        {
+            position: relative;
+            margin: 0px auto;
+            width: 1000px;
+            background-color: White;
+            top: 0px;
+            left: 0px;
+        }
+        #pindao_nav_city
+        {
+            padding-bottom: 1px;
+            line-height: 22px;
+            margin: 0px auto;
+            padding-left: 0px;
+            width: 1002px;
+            padding-right: 0px;
+            background: #CDE0F1;
+            height: 22px;
+            font-size: 14px;
+            padding-top: 1px;
+            color: Black;
+        }
+        #SeriaImg
+        {
+            cursor: pointer;
+        }
+        .td
+        {
+            width: 170px;
+        }
+        .search
+        {
+            background-color: #F8FBFD;
+            height: 25px;
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #mainNav
+        {
+            width: 100%;
+            height: 35px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            line-height: 35px;
+            background-image: url('images/img_nav.PNG');
+        }
+        #mainNav ul
+        {
+            list-style: none;
+            width: 100%;
+            height: 35px;
+        }
+        #mainNav ul li
+        {
+            float: left;
+            word-spacing: 3px;
+            width: 200px;
+            text-align: center;
+        }
+        #mainNav a
+        {
+            color: White;
+        }
+        #mainNav a:hover
+        {
+            color: #ffbb00;
+            text-decoration: underline;
+        }
+        .d1
+        {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            background-color: #000000;
+            position: relative;
+        }
+        .loading
+        {
+            width: 100%;
+            background-color: #000000;
+            color: #FFCC00;
+            font-size: 12px;
+            height: 150px;
+            text-align: center;
+            padding-top: 0px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .d2
+        {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+        img
+        {
+            border: 0px;
+        }
+        #topul ul
+        {
+            display: none;
+            font-size: 24px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager EnableScriptGlobalization="true" EnableScriptLocalization="true"
+        ID="ToolkitScriptManager1" runat="server">
+    </ajaxToolkit:ToolkitScriptManager>
+    <div id="main">
+        <div id="fade_focus">
+            <div class="loading">
+                Loading...<br />
+            </div>
+            <div id="topul">
+                <ul>
+                    <li>
+                        <img src="images/a.jpg" width="1000" height="150" alt="公平 公正" /></li>
+                    <li>
+                        <img src="images/b.jpg" width="1000" height="150" alt="明标 明投" /></li>
+                    <li>
+                        <img src="images/c.jpg" width="1000" height="150" alt="公平 公正" /></li>
+                    <li>
+                        <img src="images/d.jpg" width="1000" height="150" alt="明标 明投" /></li>
+                </ul>
+            </div>
+        </div>
+        <%--<div style="width: 100%; height: 80px; background-image: url('images/banner.jpg');
+            background-repeat: no-repeat; margin-top: 5px; margin-bottom: 5px;">
+        </div>--%>
+        <div style="width: 100%;">
+            <div id="mainNav">
+                <ul>
+                    <li><a href="index.aspx">首&nbsp;&nbsp;页</a></li>
+                    <li><a href="ProjectList.aspx">招标公告</a></li>
+                    <li><a href="PublicityList.aspx">中标公告</a></li>
+                    <li><a href="DisplyProcess.aspx">操作流程</a></li>
+                    <li><a href="http://www.haztb.gov.cn/hawz/" target="_blank">淮安招标网</a></li>
+                </ul>
+            </div>
+            <div id="top-login" style="width: 1000px;">
+                <div runat="server" id="DivLogIn" style="vertical-align: middle; font-size: 12px;
+                    width: 100%; background-color: #F8FBFD; height: 25px; line-height: 0px; background-image: url('images/img_bottomnav.PNG');">
+                    <table style="font-size: 12px; width: 100%" cellpadding="0" cellspacing="2">
+                        <tr valign="middle">
+                            <td style="width: 180px">
+                                用户名:&nbsp;&nbsp;
+                                <asp:TextBox ID="TextBoxLoginName" runat="server" CssClass="input_1" MaxLength="20"
+                                    TabIndex="4"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="用户名不能为空"
+                                    Display="None" ControlToValidate="TextBoxLoginName" SetFocusOnError="True">*
+                                </asp:RequiredFieldValidator>
+                                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender2" runat="server"
+                                    PopupPosition="BottomLeft" TargetControlID="RequiredFieldValidator1">
+                                </ajaxToolkit:ValidatorCalloutExtender>
+                            </td>
+                            <td style="width: 180px">
+                                密码:&nbsp;&nbsp;
+                                <asp:TextBox ID="TextBoxLogPwd" runat="server" CssClass="input_2" MaxLength="16"
+                                    TabIndex="5" TextMode="Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="密码不能为空！"
+                                    ControlToValidate="TextBoxLogPwd" Display="None" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender1" runat="server"
+                                    PopupPosition="BottomLeft" TargetControlID="RequiredFieldValidator2">
+                                </ajaxToolkit:ValidatorCalloutExtender>
+                            </td>
+                            <td style="width:640px" valign="middle" align="left">
+                                验证码:
+                                <asp:TextBox runat="server" ID="TextBoxCheck" CssClass="input_3" MaxLength="4" TabIndex="6"></asp:TextBox>
+                                <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="验证码输入有误"
+                                    Display="None" ControlToValidate="TextBoxCheck" ClientValidationFunction="SerialCheck"
+                                    EnableClientScript="True" EnableViewState="True" SetFocusOnError="True" ValidateEmptyText="True">*</asp:CustomValidator>
+                                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender4" runat="server"
+                                    TargetControlID="CustomValidator1" PopupPosition="BottomLeft">
+                                </ajaxToolkit:ValidatorCalloutExtender>
+                                &nbsp;&nbsp;
+                                <img alt="点击更换验证码" style="cursor: pointer;" id="imgSerial" src="Management/Common/VerifyImage.ashx"
+                                    onclick="this.src='Management/Common/VerifyImage.ashx?'+ Math.random();" />
+                                &nbsp;&nbsp; <a onclick="document.getElementById('imgSerial').src='Management/Common/VerifyImage.ashx?'+ Math.random();"
+                                    style="font-size: 11px; cursor: pointer;">看不清楚？换一张</a> &nbsp;&nbsp;
+                                <asp:ImageButton runat="server" ID="BtnLogin" CssClass="button" ImageUrl="images/btn-log.gif"
+                                    TabIndex="7" OnClick="BtnLogin_Click" onmousemove="checkcss(this)" onmouseout="clearcss(this)"
+                                    AlternateText="登录" />                                
+                               &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+                                &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;
+                                 &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            
+                                <a href="EpseRegister.aspx">用户注册</a> <a href="/Management/AdminLoginPage.aspx" tabindex="9">管理员登录</a>  
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="DivUserInfo" runat="server" style="vertical-align: middle; font-size: 12px;
+                    width: 100%; background-color: #F8FBFD; height: 25px; line-height: 30px; background-image: url('images/img_bottomnav.PNG');"
+                    visible="false">
+                    &nbsp;&nbsp;欢迎您：&nbsp;&nbsp;
+                    <asp:HyperLink runat="server" ID="LinkUserName" NavigateUrl="~/Management/AdminLoginPage.aspx"></asp:HyperLink>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:LinkButton ID="LinkButtonQuit" runat="server" Text="安全退出" OnClick="LinkButtonQuit_Click"
+                        OnClientClick="return confirm('您确定要退出登录吗？')" CausesValidation="False"></asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/Management/AdminLoginPage.aspx">进入管理中心</a>
+                </div>
+            </div>
+            <div class="clear" style="height: 5px;">
+            </div>
+            <div id="sitemap" style="width: 100%; height: 27px; background-image: url('images/img_middle.png');">
+                <table width="100%">
+                    <tr>
+                        <td style="width: 50%">
+                            <img alt="" src="images/dot_c.jpg" /><b>您现在的位置：</b><asp:SiteMapPath ID="SiteMapPath1"
+                                runat="server" ForeColor="Black">
+                            </asp:SiteMapPath>
+                        </td>
+                        <td>
+                            <b style="font-size: 13px;">信息查询 ：</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox runat="server" ID="TextBoxSearch" CssClass="input_4" MaxLength="50"
+                                TabIndex="1"></asp:TextBox>
+                        </td>
+                        <td align="left">
+                            <asp:DropDownList ID="DropListSearch" runat="server" Height="22px" TabIndex="2">
+                                <%--ForeColor="#727171"--%>
+                                <asp:ListItem Value="1">招标公告</asp:ListItem>
+                                <asp:ListItem Value="2">中标公示</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                        <td align="right">
+                            &nbsp;&nbsp;&nbsp;
+                            <asp:ImageButton runat="server" ID="Btn_Search" Height="22px" onmousemove="checkcss(this)"
+                                onmouseout="clearcss(this)" ImageUrl="~/images/search-btn1.gif" CausesValidation="False"
+                                TabIndex="3" AlternateText="搜索" EnableViewState="False" ToolTip="搜索相关信息" OnClick="Btn_Search_Click" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="width: 100%; height: 5px;">
+        </div>
+        <div style="width: 100%;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        <br />
+        <div class="clear">
+        </div>
+        <div class="shoucang">
+            <a href="#" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.haztb.gov.cn/hawz/');"
+                title="设置本网页为浏览器首页">设为首页</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="#" title="收藏本站到你的收藏夹">
+                    加入收藏</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="#">联系我们</a>
+        </div>
+        <div class="banquan">
+            <div class="banquan_content">
+                版权所有：清河区政府采购中心&nbsp;<img alt="版权所有" src="images/master/gif_57_037.gif" style="height: 15px;
+                    width: 15px;" /></div>
+        </div>
+        <div class="lianxi">
+           咨询电话：83643978 &nbsp;
+           开发单位：淮安淮微软件技术有限公司 技术支持电话：83856179 <span style="color: #f00">
+                <script type="text/javascript" src="" language="JavaScript"></script>
+
+            </span>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
